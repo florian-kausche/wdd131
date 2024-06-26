@@ -159,6 +159,7 @@ main {
  */
 .card ul {
     list-style-type: none;
+    
 }
 
 /* 
@@ -166,6 +167,7 @@ main {
  */
 .card ul li {
     margin-bottom: 5px;
+   
 }
 
 /* 
@@ -173,7 +175,7 @@ main {
  */
 .card ul li a {
     text-decoration: none;
-    color: #2980b9;
+    color: #875602;
     transition: color 0.3s ease;
 }
 
@@ -182,7 +184,7 @@ main {
  */
 .card ul li a:hover {
     text-decoration: underline;
-    color: #d35400;
+    color: #e29e70;
 }
 
 /* Footer styling */
