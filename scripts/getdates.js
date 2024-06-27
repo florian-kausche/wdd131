@@ -1,4 +1,4 @@
-// getdates.js
+
 
 // Function to set the current year
 function setCurrentYear() {
