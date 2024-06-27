@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelector('.nav-links');
 
     hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-        hamburger.textContent = navLinks.classList.contains('show') ? '✖' : '☰';
+        navLinks.classList.toggle('open');
+        hamburger.classList.toggle('open');
     });
 });

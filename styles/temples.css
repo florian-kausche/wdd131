@@ -1,77 +1,128 @@
-/* General Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	font-family: Arial, sans-serif;
 }
 
-header, footer {
-    width: 100%;
-    text-align: center;
-    background-color: #4A148C;
-    color: #fff;
-    padding: 1em 0;
+header {
+	background-color: #4A148C;
+	color: #fff;
+	padding: 1rem 0;
+	text-align: right;
 }
 
-/* Navigation Styles */
+h1 {
+	text-align: left;
+	font-family: times, serif;
+	font-size: 1.5rem;
+	margin-left: 1rem;
+	display: inline-block;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #fff;
+	cursor: pointer;
+	display: none; /* Hide by default */
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "❎";
+}
+
 .nav-links {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
+	list-style: none;
+	display: flex;
 }
 
 .nav-links li {
-    margin: 0 1em;
+	margin: 0 1em;
 }
 
 .nav-links a {
-    color: #fff;
-    text-decoration: none;
+	color: #fff;
+	text-decoration: none;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
-/* Main Content Styles */
+/* Mobile view styles */
+@media (max-width: 600px) {
+	#menu {
+		display: block; /* Show hamburger menu */
+	}
+
+	.nav-links {
+		flex-direction: column;
+		position: absolute;
+		top: 3rem;
+		right: 0;
+		background-color: #4A148C;
+		width: 100%;
+		display: none;
+	}
+
+	.nav-links.open {
+		display: flex;
+	}
+
+	.nav-links li {
+		margin: 0.5rem 0;
+	}
+}
+
 main {
-    width: 100%;
-    max-width: 1200px;
-    padding: 1em;
+	padding: 1rem;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin: 1rem 0;
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1em;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+}
+
+.gallery img {
+	width: 450px;
+	height: 250px;
 }
 
 figure {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-img {
-    width: 250px;
-    height: 250px;
+	margin: 0;
 }
 
 figcaption {
-    margin-top: 0.5em;
+	margin-top: 0.5rem;
 }
 
-/* Footer Styles */
 footer {
-    margin-top: auto;
+	background-color: #4A148C;
+	color: #fff;
+	text-align: center;
+	padding: 1rem 0;
+	margin-top: 1rem;
 }
