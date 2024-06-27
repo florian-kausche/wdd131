@@ -1,12 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('year').textContent = new Date().getFullYear();
     document.getElementById('last-updated').textContent = document.lastModified;
-
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-        hamburger.classList.toggle('open');
     });
-});
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuButton = document.getElementById('menu');
+        const navLinks = document.querySelector('.nav-links');
+    
+        menuButton.addEventListener('click', function() {
+            navLinks.classList.toggle('open');
+            menuButton.classList.toggle('open');
+        });
+    });
+    
+
+
+    
