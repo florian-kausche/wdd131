@@ -15,5 +15,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Call the functions to set the dates
     setCurrentYear();
-    setLastModified();
-   });
+    setLastModified();});
+
