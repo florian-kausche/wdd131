@@ -1,4 +1,3 @@
-
 :root {
     --primary-color: #d2232a;
     --secondary-color: #ffffff;
@@ -45,7 +44,6 @@ main {
     width: 95.7%;
     height: 30%;
     background: rgba(243, 128, 132, 0.5);
-    flex-wrap: wrap;
 }
 
 #data, #weather {
@@ -55,7 +53,17 @@ main {
     flex: 1;
     margin: 1rem;
     max-width: 30%;
-    box-sizing: border-box;
+    position: relative;
+}
+
+#data::after, #weather::after {
+    content: '';
+    display: block;
+    height: 4px;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
 }
 
 h2 {
@@ -82,11 +90,10 @@ footer {
     color: var(--secondary-color);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .overlay {
         flex-direction: column;
         align-items: center;
-        padding: 1rem;
     }
 
     #data, #weather {

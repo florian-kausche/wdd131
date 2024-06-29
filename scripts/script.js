@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const lastModified = document.lastModified;
     document.getElementById('last-modified').textContent = lastModified;
 
-    const temperature = 10; // in Celsius
-    const windSpeed = 5; // in km/h
+    const temperature = 5; // in Celsius
+    const windSpeed = 15; // in km/h
 
     function calculateWindChill(temp, speed) {
         return (13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16)).toFixed(2);
