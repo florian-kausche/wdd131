@@ -118,8 +118,8 @@ h2 {
 
 
 .gallery img {
-    width: 300px; /* Set the desired width */
-    height: 200px; /* Set the desired height */
+    width: 300px; 
+    height: 200px; 
     object-fit: cover; /* Ensure the images cover the area without distortion */
 }
 
