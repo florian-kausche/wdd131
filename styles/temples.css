@@ -73,7 +73,7 @@ h1 {
         position: absolute;
         top: 3rem;
         right: 0;
-        background-color:#4A148C;
+        background-color: #4A148C;
         width: 30%;
         display: none;
         align-items: center;
@@ -86,6 +86,17 @@ h1 {
 
     .nav-links li {
         margin: 0.5rem 0;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -105,20 +116,22 @@ h2 {
     gap: 1rem;
 }
 
+
 .gallery img {
-    width: 450px;
-    height: 250px;
+    width: 300px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    object-fit: cover; /* Ensure the images cover the area without distortion */
 }
+
 
 figure {
     margin: 0;
-    margin: 0;
-    border: 1px solid #ddd; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease; 
-    overflow: hidden; 
-    position: relative; 
-    z-index: 0
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
 }
 
 figcaption {
@@ -128,6 +141,7 @@ figcaption {
     color: #fff;
     text-align: center;
 }
+
 figure:hover {
     transform: translateY(-5px); /* Lift up slightly on hover */
 }
@@ -139,4 +153,3 @@ footer {
     padding: 1rem 0;
     margin-top: 1rem;
 }
-
