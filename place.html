@@ -17,7 +17,10 @@
     </header>
     <main>
         <section id="hero">
-            <img src="images/hessen-germany.webp" srcset="images/hessen-germany.webp 1x, images/hessen-germany@2x.webp 2x" alt="Hessen, Germany">
+            <picture>
+                <source srcset="images/hessen-germany.webp" media="(min-width: 768px)">
+                <img src="images/hessen-germany.webp" alt="Temple name and location">
+              </picture>
             <div class="overlay">
                 <div id="data">
                     <h2>Data</h2>
@@ -45,7 +48,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; <span id="current-year"></span> | 🌸 Florian Adu Kausche 🌸 Hessen Germany</p>
+        <p>&copy; <span id="current-year"></span> 🌸 Florian Adu Kausche 🌸 Hessen Germany</p>
         <p>Last updated: <span id="last-modified"></span></p>
     </footer>
     <script defer src="scripts/script.js"></script>
