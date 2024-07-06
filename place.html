@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +12,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
-    <header>
+    <header role="banner">
         <h1>Hessen Germany</h1>
     </header>
-    <main>
+    <main role="main">
         <section id="hero">
             <picture>
-                <source srcset="images/hessen-germany.webp">
-                <img src="images/hessen-germany.webp" alt="germany hessen-germany">
-              </picture>
+                <source srcset="images/hessen-germany-large.webp" media="(min-width: 1200px)">
+                <source srcset="images/hessen-germany-medium.webp" media="(min-width: 768px)">
+                <source srcset="images/hessen-germany-small.webp" media="(max-width: 767px)">
+                <img src="images/hessen-germany-small.webp" alt="Beautiful landscape of Hessen, Germany">
+            </picture>
             <div class="overlay">
                 <div id="data">
                     <h2>Data</h2>
@@ -47,10 +51,11 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer role="contentinfo">
         <p>&copy; <span id="current-year"></span> 🌸 Florian Adu Kausche 🌸 Hessen Germany</p>
         <p>Last updated: <span id="last-modified"></span></p>
     </footer>
     <script defer src="scripts/script.js"></script>
 </body>
+
 </html>
