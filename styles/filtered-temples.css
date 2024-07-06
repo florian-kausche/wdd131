@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #4A148C;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-family: Times, serif;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    display: none; /* Hide by default */
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-right: 1rem;
+}
+
+.nav-links li {
+    margin: 0 1em;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile view styles */
+@media (max-width: 600px) {
+    #menu {
+        display: block; /* Show hamburger menu */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        background-color: #4A148C;
+        width: 30%;
+        display: none;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+main {
+    padding: 1rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+
+.gallery img {
+    width: 300px; 
+    height: 200px; 
+    object-fit: cover; /* Ensure the images cover the area without distortion */
+}
+
+
+figure {
+    margin: 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #4A148C;
+    color: #fff;
+    text-align: center;
+}
+
+figure:hover {
+    transform: translateY(-5px); /* Lift up slightly on hover */
+}
+
+footer {
+    background-color: #4A148C;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 1rem;
+}

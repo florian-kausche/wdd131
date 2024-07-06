@@ -81,11 +81,6 @@ main {
     width: 85%; /* Set width */
 }
 
-.weather-icon-svg {
-    width: 5%; /* Reduced width of SVG icons */
-    height: auto; /* Maintain aspect ratio */
-}
-
 h2 {
     color: var(--accent-color); /* Set h2 color */
     font-size: 1.5rem; /* Set font size for h2 */

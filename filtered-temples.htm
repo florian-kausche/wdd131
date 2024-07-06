@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temple Album</title>
+    <meta name="description" content="Filtered Temple Album Website">
+    <meta name="author" content="Florian Adu Kausche">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="screen and (min-width: 600px)">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Temple Album</h1>
+            <button id="menu" aria-label="Toggle Menu"></button>
+            <ul class="nav-links">
+                <li><a href="#" data-filter="home">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Home</h2>
+        <div class="gallery" id="temple-gallery"></div>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span>| Florian Adu Kausche| Accra, Ghana.</p>
+        <p>Last updated: <span id="last-updated"></span></p>
+    </footer>
+    <script defer src="scripts/filtered-temples.js"></script>
+    <script defer src="scripts/menu-toggle.js"></script>
+</body>
+</html>
