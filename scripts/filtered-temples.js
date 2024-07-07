@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             switch (filter) {
                 case 'old':
-                    displayTemples(temple => getYearFromDedicatedDate(temple.dedicated) < 1940);
+                    displayTemples(temple => getYearFromDedicatedDate(temple.dedicated) < 1900);
                     break;
                 case 'new':
                     displayTemples(temple => getYearFromDedicatedDate(temple.dedicated) > 2000);
