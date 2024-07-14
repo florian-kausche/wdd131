@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://byui-cse.github.io/cse210-ww-course-2023/week05/develop.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSE 210 | Polymorphism Programming Assignment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./CSE 210 _ Polymorphism Programming Assignment_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./CSE 210 _ Polymorphism Programming Assignment_files/course.css">
+  <link rel="stylesheet" href="./CSE 210 _ Polymorphism Programming Assignment_files/default.min.css">
+
+<style>.toast-container{--radius: 5px;--stack-gap: 20px;--safe-area-gap: env(safe-area-inset-bottom);position:fixed;display:block;max-width:468px;bottom:calc(env(safe-area-inset-bottom) + 20px);bottom:calc(var(--safe-area-gap, 0px) + 20px);right:20px;z-index:5000;transition:all .4s ease}.toast-container .toast{position:absolute;bottom:0;right:0;width:468px;transition:all .4s ease;transform:translate3d(0,86px,0);opacity:0}.toast-container .toast .toast-inner{--toast-bg: none;--toast-fg: #fff;--toast-border-color: #eaeaea;box-sizing:border-box;border-radius:var(--radius);border:1px solid #eaeaea;border:1px solid var(--toast-border-color);display:flex;align-items:center;justify-content:space-between;padding:24px;color:#fff;color:var(--toast-fg);background-color:none;background-color:var(--toast-bg);height:var(--height);transition:all .25s ease}.toast-container .toast .toast-inner.default{--toast-fg: #000;--toast-bg: #fff;box-shadow:0 5px 10px #0000001f}.toast-container .toast .toast-inner.success{--toast-bg: #0076ff;--toast-border-color: var(--toast-bg)}.toast-container .toast .toast-inner.error{--toast-bg: #e00;--toast-border-color: var(--toast-bg)}.toast-container .toast .toast-inner.warning{--toast-bg: #f5a623;--toast-border-color: var(--toast-bg)}.toast-container .toast .toast-inner.dark{--toast-bg: #000;--toast-fg: #fff;--toast-border-color: #333}.toast-container .toast .toast-inner.dark .toast-button{--button-fg: #000;--button-bg: #fff;--button-border: #fff;--button-border-hover: #fff;--button-fg-hover: #fff}.toast-container .toast .toast-inner.dark .toast-button.cancel-button{--cancel-button-bg: #000;--cancel-button-fg: #888;--cancel-button-border: #333}.toast-container .toast .toast-inner.dark .toast-button.cancel-button:hover{color:#fff;border-color:var(--button-border)}.toast-container .toast .toast-text{width:100%;height:100%;font-size:14px;margin-top:-1px;margin-right:24px;transition:all .3s ease-in}.toast-container .toast .toast-button{--button-fg: #000;--button-bg: #fff;--button-border: #fff;--button-border-hover: #fff;--button-fg-hover: #fff;min-width:auto;height:24px;line-height:22px;padding:0 10px;font-size:14px;background-color:#fff;background-color:var(--button-bg);color:#000;color:var(--button-fg);white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;user-select:none;cursor:pointer;vertical-align:middle;border-radius:var(--radius);outline:none;border:1px solid #fff;border:1px solid var(--button-border);transition:all .2s ease}.toast-container .toast .toast-button:hover{border-color:var(--button-border-hover);background-color:transparent;color:var(--button-fg-hover)}.toast-container .toast .toast-button.cancel-button{--cancel-button-bg: #fff;--cancel-button-fg: #666;--cancel-button-border: #eaeaea;margin-right:10px;color:#666;color:var(--cancel-button-fg);border-color:#eaeaea;border-color:var(--cancel-button-border);background-color:#fff;background-color:var(--cancel-button-bg)}.toast-container .toast .toast-button.cancel-button:hover{--cancel-button-fg: #000;--cancel-button-border: #000}.toast-container .toast .default .toast-button{--button-fg: #fff;--button-bg: #000;--button-border: #000;--button-border-hover: #000;--button-fg-hover: #000}.toast-container .toast:after{content:"";position:absolute;left:0;right:0;top:calc(100% + 1px);width:100%;height:1000px;background:transparent}.toast-container .toast.toast-1{transform:translateZ(0);opacity:1}.toast-container .toast:not(:last-child){--i: calc(var(--index) - 1);transform:translate3d(0,calc(1px - (var(--stack-gap) * calc(var(--index) - 1))),0) scale(calc(1 - .05 * (var(--index) - 1)));transform:translate3d(0,calc(1px - (var(--stack-gap) * calc(var(--index) - 1))),0) scale(calc(1 - .05 * calc(var(--index) - 1)));transform:translate3d(0,calc(1px - (var(--stack-gap) * var(--i))),0) scale(calc(1 - .05 * var(--i)));opacity:1}.toast-container .toast:not(:last-child) .toast-inner{height:var(--front-height)}.toast-container .toast:not(:last-child) .toast-inner .toast-text{opacity:0}.toast-container .toast.toast-4{opacity:0}.toast-container:has(.toast-2):hover{bottom:30px;bottom:calc(var(--safe-area-gap, 0px) + 30px)}.toast-container:hover .toast{transform:translate3d(0,calc(var(--hover-offset-y) - var(--stack-gap) * (var(--index) - 1)),0)}.toast-container:hover .toast .toast-inner{height:var(--height)}.toast-container:hover .toast .toast-text{opacity:1!important}@media (max-width: 440px){.toast-container{max-width:90vw;right:5vw}.toast-container .toast{width:90vw}}</style><script id="transcript-settings" data-css="chrome-extension://klknhfgkblobpfimidmhkclikdalnoke/react/static/css/main.css" data-react="chrome-extension://klknhfgkblobpfimidmhkclikdalnoke/react/static/js/main.js" data-aiwebm="chrome-extension://klknhfgkblobpfimidmhkclikdalnoke/images/ai.webm" data-start-hidden="true" data-show-pin="" data-hideframe="" data-start-light="" data-autoanswer="" data-searchmethod="0" data-livestream="" data-snapshot-keybind="shift+ctrl+1" data-search-keybind="shift+ctrl+2" data-search-ai-keybind="shift+ctrl+3" data-hide-ui-keybind="shift+ctrl+4" data-buttoncolor="#2563ff" data-logocolor="#ffffff" data-buttonscale="100" data-snapshot-button="true" data-snapshot-left="" data-snapshot-top="" data-snapshot-right="0" data-snapshot-bottom="0" data-language="en"></script></head>
+
+<body data-new-gr-c-s-check-loaded="14.1187.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1187.0">
+  <header>
+    <div class="page">
+      <h1>CSE 210<span id="coursetitle">: Programming with Classes</span></h1>
+      <img src="./CSE 210 _ Polymorphism Programming Assignment_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+    <nav id="autogen-top-nav">
+      <!-- This nav is auto-generated -->
+      <span><a href="https://byui-cse.github.io/cse210-ww-course-2023/index.html">Home</a></span>
+      <span><a href="https://byui-cse.github.io/cse210-ww-course-2023/week01/index.html">W1</a></span>
+      <span><a href="https://byui-cse.github.io/cse210-ww-course-2023/week02/index.html">W2</a></span>
+      <span><a href="https://byui-cse.github.io/cse210-ww-course-2023/week03/index.html">W3</a></span>
+      <span><a href="https://byui-cse.github.io/cse210-ww-course-2023/week04/index.html">W4</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/cse210-ww-course-2023/week05/index.html">W5</a></span>
+      <span><a href="https://byui-cse.github.io/cse210-ww-course-2023/week06/index.html">W6</a></span>
+      <span><a href="https://byui-cse.github.io/cse210-ww-course-2023/week07/index.html">W7</a></span>
+      <!-- end auto-generated -->
+    </nav>
+    <h2>Week 05 Develop: Eternal Quest Program</h2>
+
+    <h3>Problem Overview</h3>
+    <p>Many people set goals for areas they want to improve in their lives. These goals can be very important to help us in our growth, such as highlighted in the Church's Children and Youth program. But despite our best intentions, we often struggle to follow through with these goals.</p>
+
+    <p>Think for a minute about what are the biggest challenges that keep someone from reaching the goals they have set?</p>
+
+    <p>There are many different reasons you might come up with that apply generally such as forgetting, not having enough time, and programs or applications could help with many of those. In addition to these general challenges, some that are specific to goals could include:</p>
+    <ul>
+      <li>Many goals repeat and are never finished, such as studying the scriptures.</li>
+      <li>Many goals have to be completed a number of times before they can be finished, such as attending the temple 10 times.</li>
+      <li>While we recognize the value of our goals in the eternal sense, sometimes we need some shorter term "rewards" to help excite us along the way.</li>
+    </ul>
+
+    <h3>Solution Idea</h3>
+    <p><em>Gamification</em> is the idea of turning something into a game. It could include a number of different concepts, but often involves getting badges or awards, as you "level up" with more points.</p>
+
+    <p>Consider a program that keeps track of various kinds of goals that people have, which are goals in their real life, such as studying the scriptures each day, finishing a project, or even stopping a bad habit. This program could be set up to keep track of your progress on these goals and offer points, awards, or other celebrations to keep you encouraged to keep working.</p>
+
+    <p>A program like this could be more serious, and just keep track of goal progress, or it could be as funny and personal as you would want (for example, a level 13 Ninja Unicorn). The idea is to engage the part of our brain that loves seeing these "wins" and accomplishments as we work on our goals.</p>
+
+    <p>No matter what the exact format is, this program could help each of us on our "Eternal Quest" of returning to be with our Father in Heaven.</p>
+
+    <h3>Specification</h3>
+    <p>Write an Eternal Quest program to track various kinds of goals.</p>
+
+    <p>Your program can include whatever kinds of "gamification" components you like, but each program should have the following base functionality.</p>
+
+    <h4>Functional requirements</h4>
+    <p>Your program must do the following:</p>
+    <ol>
+      <li>Provide for simple goals that can be marked complete and the user gains some value.</li>
+        <ul><li>For example, if you run a marathon you get 1000 points.</li></ul>
+      <li>Provide for eternal goals that are never complete, but each time the user records them, they gain some value.
+        <ul><li>For example, every time you read your scriptures you get 100 points.</li></ul>
+      </li>
+      <li>Provide for a checklist goal that must be accomplished a certain number of times to be complete. Each time the user records this goal they gain some value, but when they achieve the desired amount, they get an extra bonus.
+        <ul><li>For example, if you set a goal to attend the temple 10 times, you might get 50 points each time you go, and then a bonus of 500 points on the 10th time.</li></ul>
+      </li>
+      <li>Display the user's score.</li>
+      <li>Allow the user to create new goals of any type.</li>
+      <li>Allow the user to record an event (meaning they have accomplished a goal and should receive points).</li>
+      <li>Show a list of the goals. This list should show indicate whether the goal has been completed or not (for example <code>[&nbsp;]</code> compared to <code>[X]</code>), and for checklist goals it should show how many times the goal has been completed (for example <code>Completed 2/5 times</code>).</li>
+      <li>Allow the user's goals and their current score to be saved and loaded.</li>
+    </ol>
+
+    <h4>Design Requirements</h4>
+    <p>In addition your program must:</p>
+    <ol>
+      <li>Use inheritance by having a separate class for each kind of activity with a base class to contain any shared attributes or behaviors.</li>
+      <li>Use polymorphism by having derived classes override base class methods where appropriate.</li>
+      <li>Follow the principles of encapsulation and abstraction by having private member variables and putting related items in the same class.</li>
+    </ol>
+
+    <h4>Showing Creativity and Exceeding Requirements</h4>
+    <p>Meeting the core requirements makes your program eligible to receive a 93%. To receive 100% on the assignment, you need to show creativity and exceed these requirements.</p>
+    <p>Here are some ideas you might consider:</p>
+
+    <ul>
+      <li>Add your own ideas for gamification. This could include leveling up, earning certain bonuses, or other "fun" aspects to the quest.</li>
+      <li>Add additional kinds of goals, such as the ability to make progress towards a large goal (such as getting value for working towards running a marathon), or "negative goals" where they lose points for bad habits.</li>
+      <li>There are lots of ways to show creativity in this assignment. Pick anything that sounds fun to you!</li>
+    </ul>
+
+    <p>Report on what you have done to exceed requirements by adding a description of it in a comment in the Program.cs file.</p>
+
+    <h4>Video Demo</h4>
+    <p>The following video demonstrates the way this program should work:</p>
+
+    <p>Direct link: <a href="https://video.byui.edu/media/t/1_i8i158nf" target="blank">Eternal Quest Demo</a> (9 minutes)</p>
+    <figure class="video-container">
+      <iframe id="kaltura_player" src="./CSE 210 _ Polymorphism Programming Assignment_files/1157612.html" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="CSE 210 Eternal Quest Program Demo"></iframe>
+    </figure>
+
+    <h3>Code Helps</h3>
+    <p>You might find the following code helps useful in this project:</p>
+
+    <details open="">
+      <summary>Reading Text Files in C#</summary>
+
+      <p>The easiest way to read a text file in C# is to read the entire file into an array of strings (one per line) using the <code>System.IO.File.ReadAllLines()</code> function. Then, you can iterate through each <code>string</code> as you would with any list.</p>
+
+      <p>As you go through each string, you can split it based on a separator character and get the pieces you need by their index.</p>
+
+      <p>The following shows an example of reading a file and splitting up the strings.</p>
+
+<pre><code class="csharp hljs language-csharp">
+<span class="hljs-built_in">string</span> filename = <span class="hljs-string">"myFile.txt"</span>;
+<span class="hljs-built_in">string</span>[] lines = System.IO.File.ReadAllLines(filename);
+
+<span class="hljs-keyword">foreach</span> (<span class="hljs-built_in">string</span> line <span class="hljs-keyword">in</span> lines)
+{
+    <span class="hljs-built_in">string</span>[] parts = line.Split(<span class="hljs-string">","</span>);
+
+    <span class="hljs-built_in">string</span> firstName = parts[<span class="hljs-number">0</span>];
+    <span class="hljs-built_in">string</span> lastName = parts[<span class="hljs-number">1</span>];
+}
+</code></pre>      
+
+      <p>There are many other ways to work with files in C# some of which would be more efficient if the file is very large and you don't want to store it all in memory at once, but this approach will work just fine for this project.</p>
+    </details>
+
+    <details>
+      <summary>Writing Text Files in C#</summary>
+
+      <p>You can create or write a text file in C# using a class the <code> System.IO.StreamWriter</code> class. When you create an object of this class you can use the <code>Write()</code> and <code>WriteLine()</code> methods in the same way as the <code>Console.Write()</code> methods, except that they will write the strings to the file instead of to the Console.</p>
+
+      <p>To make sure the file gets closed and cleaned up appropriately when you are done, it is best practice to put the <code>StreamWriter</code> object in a <code>using()</code> block. This works the same as a "<code>with</code>" block in Python and ensures that the resources are cleaned up when you leave that area of the code.</p>
+        
+      <p>The following shows an example of writing text to a new file</p>
+
+<pre><code class="csharp hljs language-csharp">
+<span class="hljs-comment">// Don't forget to put this at the top, so C# knows where to find the StreamWriter class</span>
+<span class="hljs-keyword">using</span> System.IO; 
+
+...
+
+<span class="hljs-built_in">string</span> fileName = <span class="hljs-string">"myFile.txt"</span>;
+
+<span class="hljs-keyword">using</span> (StreamWriter outputFile = <span class="hljs-keyword">new</span> StreamWriter(filename))
+{
+    <span class="hljs-comment">// You can add text to the file with the WriteLine method</span>
+    outputFile.WriteLine(<span class="hljs-string">"This will be the first line in the file."</span>);
+    
+    <span class="hljs-comment">// You can use the $ and include variables just like with Console.WriteLine</span>
+    <span class="hljs-built_in">string</span> color = <span class="hljs-string">"Blue"</span>;
+    outputFile.WriteLine(<span class="hljs-string">$"My favorite color is <span class="hljs-subst">{color}</span>"</span>);
+}
+</code></pre> 
+    </details>
+
+    <details>
+      <summary>Saving and Loading objects in C#</summary>
+      <p>Turning an object into a string so that you can save it, load it, or send it to another program on the internet, is called "Serializing" and "Deserializing" it. Depending on how complicated your object is, this can require you to be somewhat clever in how it is done. There are libraries of functions that others have written to help serialize and deserialize objects into various formats (for example, JSON, XML, etc.). While you are welcome to use one of these if you would like, they can often take a fair amount of work to configure correctly, so for our simple case, it is probably easier to <strong>not</strong> use one of them.</p>
+
+      <p>Instead, consider creating a method that returns a string containing the pieces of data that you need for your object, such as: <code>GetStringRepresentation()</code>. This might include the type of the object first (so you'll know later which one you should be using), and then any details of the object. For example, if you had a <code>Person</code> object, it might return a string like this: <code>"Person:Brigham,Young"</code>.</p>
+
+      <p>Then, if you wanted to save a whole list of people, you could iterate through them and for each one, call the <code>GetStringRepresentation()</code> method and then save the string out to a file.</p>
+
+      <p>Similarly, when it is time to load the file, you could read in the line, and first split it based on the colon <code>:</code> to get the type of the object (<code>Person</code>) and the details (<code>"Brigham,Young"</code>). Then, you could create a method called <code>CreatePerson</code> that would accept the string of details (<code>"Brigham,Young"</code>). This method could split the string on the commas to get the various items. Then, it could create a new <code>Person</code> object, set all the values, and return it.</p>
+
+      <p>As a side note, this pattern of creating a method (or a class) to help create objects for you is common enough that it has a name: <em>The Factory Pattern</em>. In future courses, you will learn more about the Factory Pattern, and how to handle many of the complexities that could arise when creating objects.</p>
+      
+    </details>
+
+    <h3>Design</h3>
+    <p>You will work with your team to create a design for this program. Then, you will each write the code for the program individually.</p>
+
+
+    <details>
+      <summary>Final Design (Do not open until after your design meeting)</summary>
+      <p>For reference purposes, here is a copy of the design that was created during the design activity.</p>
+      
+      <p>In order to understand the decisions that led to this design, make sure to walk through <a href="https://byui-cse.github.io/cse210-ww-course-2023/week05/design.html">the design activity</a> step by step before using this design to start your code.</p>
+
+      <figure>
+        <img src="./CSE 210 _ Polymorphism Programming Assignment_files/eternal-quest-program-class-diagram.png" alt="Eternal Quest program class diagram">
+      </figure>
+
+    </details>
+
+    <h3>Develop the Program</h3>
+    <p>In the course repository, find the <code>Develop05</code> project in the <code>Prove</code> folder and write your program there.</p>
+
+    <h3>Submission</h3>
+    <ol>
+      <li>Develop the program using the principle of Polymorphism as described above.</li>
+      <li>Make sure to describe anything you have done to exceed the requirements in comments in the Program.cs file.</li>
+      <li>Commit your source code and push it to GitHub.</li>
+      <li>Verify that you can see your updated code at GitHub.</li>
+      <li>In Canvas, submit a link to your GitHub repository. In the submission comment, describe anything you have done to show creativity and exceed the core requirements.</li>
+    </ol>
+
+  </main>
+
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="./CSE 210 _ Polymorphism Programming Assignment_files/highlight.min.js.download"></script>
+  <script>hljs.highlightAll();</script>
+
+
+
+<scribe-shadow id="crxjs-ext" data-shadow-root="shadow-root-0" style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; z-index: 2147483647; overflow: visible; visibility: visible;"><template shadowrootmode="open"><div id="root-scribe-elem" style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; overflow: visible; color: rgb(15, 23, 42);"><div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;"><ol tabindex="-1" class="fixed bottom-auto right-0 top-0 z-[10000000] flex max-h-screen min-w-[300px] max-w-[360px] p-4"></ol></div></div><link rel="stylesheet" href="chrome-extension://okfkdaglfjjjfefdcppliegebpoegaii/assets/style.css"><style data-colorchecker-highlight="true">*[data-colorChecker-highlight] {box-shadow: 0 0 0 1px #F00, inset 0px 0px 0 1px rgba(255, 0, 0, 1);outline: 2px #F00;}</style></template></scribe-shadow><transcript-shadow-host id="transcript-snapshot-button-root" data-shadow-root="shadow-root-1"><template shadowrootmode="open"><snapshot-button id="transcript-snapshot-button" style="display: none; position: fixed; opacity: 1; aspect-ratio: 1 / 1; z-index: 9999999; bottom: 0px; right: 0px; height: 44px; border-top-left-radius: 15px; box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px; background: rgb(37, 99, 255); border: none; cursor: pointer; align-items: center; justify-content: center;"><svg viewBox="0 0 22 22" fill="#ffffff" style="pointer-events: none; flex-grow: 1; display: block; height: 50%; margin-right: -10%; margin-top: 8%;"><g id="Updates-November-2023" stroke="none" stroke-width="1" fill-rule="evenodd">
+            <g id="Snapchat-Button-(2)" transform="translate(-1307, -859)" fill-rule="nonzero">
+                <g id="Snapshot-Button" transform="translate(1289, 841)">
+                    <g id="selection" transform="translate(18, 18)">
+                        <path d="M0.916704863,4.58352431 C0.410683778,4.58352431 0,4.17284054 0,3.66681945 L0,2.75011459 C0,1.23388475 1.23388475,0 2.75011459,0 L3.66681945,0 C4.17284054,0 4.58352431,0.410683778 4.58352431,0.916704863 C4.58352431,1.42272595 4.17284054,1.83340973 3.66681945,1.83340973 L2.75011459,1.83340973 C2.24501021,1.83340973 1.83340973,2.24501021 1.83340973,2.75011459 L1.83340973,3.66681945 C1.83340973,4.17284054 1.42272595,4.58352431 0.916704863,4.58352431 Z M17.4173924,4.58352431 C16.9113713,4.58352431 16.5006875,4.17284054 16.5006875,3.66681945 L16.5006875,2.75011459 C16.5006875,2.24501021 16.089087,1.83340973 15.5839827,1.83340973 L14.6672778,1.83340973 C14.1612567,1.83340973 13.7505729,1.42272595 13.7505729,0.916704863 C13.7505729,0.410683778 14.1612567,0 14.6672778,0 L15.5839827,0 C17.1002125,0 18.3340973,1.23388475 18.3340973,2.75011459 L18.3340973,3.66681945 C18.3340973,4.17284054 17.9234135,4.58352431 17.4173924,4.58352431 Z M11.0004584,1.83340973 L7.3336389,1.83340973 C6.82761782,1.83340973 6.41693404,1.42272595 6.41693404,0.916704863 C6.41693404,0.410683778 6.82761782,0 7.3336389,0 L11.0004584,0 C11.5064794,0 11.9171632,0.410683778 11.9171632,0.916704863 C11.9171632,1.42272595 11.5064794,1.83340973 11.0004584,1.83340973 Z M9.16704863,18.3340973 L7.3336389,18.3340973 C6.82761782,18.3340973 6.41693404,17.9234135 6.41693404,17.4173924 C6.41693404,16.9113713 6.82761782,16.5006875 7.3336389,16.5006875 L9.16704863,16.5006875 C9.67306971,16.5006875 10.0837535,16.9113713 10.0837535,17.4173924 C10.0837535,17.9234135 9.67306971,18.3340973 9.16704863,18.3340973 Z M3.66681945,18.3340973 L2.75011459,18.3340973 C1.23388475,18.3340973 0,17.1002125 0,15.5839827 L0,14.6672778 C0,14.1612567 0.410683778,13.7505729 0.916704863,13.7505729 C1.42272595,13.7505729 1.83340973,14.1612567 1.83340973,14.6672778 L1.83340973,15.5839827 C1.83340973,16.089087 2.24501021,16.5006875 2.75011459,16.5006875 L3.66681945,16.5006875 C4.17284054,16.5006875 4.58352431,16.9113713 4.58352431,17.4173924 C4.58352431,17.9234135 4.17284054,18.3340973 3.66681945,18.3340973 Z M0.916704863,11.9171632 C0.410683778,11.9171632 0,11.5064794 0,11.0004584 L0,7.3336389 C0,6.82761782 0.410683778,6.41693404 0.916704863,6.41693404 C1.42272595,6.41693404 1.83340973,6.82761782 1.83340973,7.3336389 L1.83340973,11.0004584 C1.83340973,11.5064794 1.42272595,11.9171632 0.916704863,11.9171632 Z M11.8273261,8.25034376 C11.9877495,8.25034376 12.1371724,8.31267969 12.2499271,8.42543439 L20.8972041,17.0727114 C21.0099587,17.1845494 21.0741281,17.3385558 21.0741281,17.496229 C21.0741281,17.8262428 20.8064503,18.0939206 20.4764365,18.0939206 L15.8479937,18.0939206 L12.2572607,21.8175757 C12.1408392,21.9367474 11.9886662,22 11.8273261,22 C11.4973124,22 11.2296346,21.7323222 11.2296346,21.4023084 L11.2296346,8.84803533 C11.2296346,8.51802158 11.4973124,8.25034376 11.8273261,8.25034376 Z M17.4173924,6.41693404 C17.9234135,6.41693404 18.3340973,6.82761782 18.3340973,7.3336389 L18.3340973,9.16704863 C18.3340973,9.67306971 17.9234135,10.0837535 17.4173924,10.0837535 C16.9113713,10.0837535 16.5006875,9.67306971 16.5006875,9.16704863 L16.5006875,7.3336389 C16.5006875,6.82761782 16.9113713,6.41693404 17.4173924,6.41693404 Z" id="Combined-Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g></svg></snapshot-button><style data-colorchecker-highlight="true">*[data-colorChecker-highlight] {box-shadow: 0 0 0 1px #F00, inset 0px 0px 0 1px rgba(255, 0, 0, 1);outline: 2px #F00;}</style></template></transcript-shadow-host></body><copyleaks-sidebar-popup id="copyleaks-sidebar-popup-container"><template shadowrootmode="open"><img id="text-selection-icon" src="chrome-extension://gplcmncpklkdjiccbknjjkoidpgkcakd/assets/icons/cl-logo.svg" style="width: 38px; z-index: 99999999; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.41) 0px 0px 2px; cursor: pointer; display: none;"></template></copyleaks-sidebar-popup><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

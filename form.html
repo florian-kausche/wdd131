@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="description" content="product review form">
+    <meta name="author" content="Florian Adu Kausche">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="path/to/your/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="container">
+        <h1>Product Review</h1>
+        <form id="review-form" method="get" action="review.html">
+            <div class="form-group">
+                <label for="product-name">Product Name</label>
+                <select id="product-name" name="product-name" required>
+                    <option value="" disabled selected>Choose a Product ...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="overall-rating">Overall Rating</label>
+                <div class="rating">
+                    <input type="radio" id="star1" name="rating" value="1" required>
+                    <label for="star1">☆</label>
+                    <input type="radio" id="star2" name="rating" value="2" required>
+                    <label for="star2">☆</label>
+                    <input type="radio" id="star3" name="rating" value="3" required>
+                    <label for="star3">☆</label>
+                    <input type="radio" id="star4" name="rating" value="4" required>
+                    <label for="star4">☆</label>
+                    <input type="radio" id="star5" name="rating" value="5" required>
+                    <label for="star5">☆</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="install-date">Date of Installation</label>
+                <input type="date" id="install-date" name="install-date" required>
+            </div>
+            <div class="form-group">
+                <label for="useful-features">Which features did you find useful in the product? (Check all that apply)</label>
+                <div id="useful-features">
+                    <input type="checkbox" id="feature1" name="features" value="Durability">
+                    <label for="feature1">Durability</label>
+                    <input type="checkbox" id="feature2" name="features" value="Ease of Use">
+                    <label for="feature2">Ease of Use</label>
+                    <input type="checkbox" id="feature3" name="features" value="Performance">
+                    <label for="feature3">Performance</label>
+                    <input type="checkbox" id="feature4" name="features" value="Design">
+                    <label for="feature4">Design</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="review">Written Review <span class="optional">(Optional)</span></label>
+                <textarea id="review" name="review"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="username">Your Name <span class="optional">(Optional)</span></label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Post Review">
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🌺 Florian Adu Kausche 🌺 Adenta Ghana<br>
+        <span id="lastModified"></span></p>
+    </footer>
+    <script src="scripts/form.js"></script>
+</body>
+</html>

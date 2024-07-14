@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4A235A;
+    color: #fff;
+    margin: 0;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #4A235A;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    background-color: #3b154e;
+    padding: 10px;
+    margin: -20px -20px 20px -20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select, input[type="date"], input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.rating input:checked ~ label {
+    color: #FFD700;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #FFD700;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #4A235A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #633974;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4B0082;
+    color: white;
+}
+
+.optional {
+    font-style: italic;
+    color: #888;
+}
+
+input[type="checkbox"] + label {
+    margin-right: 20px;
+}

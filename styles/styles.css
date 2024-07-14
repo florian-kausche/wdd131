@@ -60,6 +60,11 @@ main {
     flex-wrap: wrap; /* Wrap children if necessary */
 }
 
+.weather-icon-svg {
+    width: 100px;
+    height: 100px;
+}
+
 #data, #weather {
     background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
     padding: 1rem; /* Add padding inside */
