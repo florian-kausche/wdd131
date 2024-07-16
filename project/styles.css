@@ -16,7 +16,7 @@ body {
 
 /* Header Styling */
 header {
-    background-color: #ae750a;
+    background-color: #91610a;
     color: #ffffff;
     text-align: center;
     padding: 2em 0;
@@ -68,24 +68,22 @@ li::before {
 
 /* Wireframes */
 .wireframes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .wireframe {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex: 1 1 45%;
+    margin: 1em 0;
 }
 
 .wireframe img {
-    max-width: 450px;
+    width: 450px;
     height: 350px;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    margin-top: 0.5em;
 }
 
 /* Footer Styling */
@@ -107,7 +105,7 @@ footer {
         padding: 1em;
     }
 
-    .wireframes {
-        grid-template-columns: 1fr;
+    .wireframe {
+        flex: 1 1 100%;
     }
 }
