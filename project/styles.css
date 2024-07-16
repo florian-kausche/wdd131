@@ -16,8 +16,8 @@ body {
 
 /* Header Styling */
 header {
-    background-color: #FFA500;
-    color: #fff;
+    background-color: #c28107;
+    color: #ffffff;
     text-align: center;
     padding: 2em 0;
 }
@@ -58,7 +58,7 @@ li {
 
 li::before {
     content: '•';
-    color: #FFA500;
+    color: #df950a;
     font-weight: bold;
     display: inline-block;
     width: 1em;
