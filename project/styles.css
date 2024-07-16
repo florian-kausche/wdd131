@@ -16,7 +16,7 @@ body {
 
 /* Header Styling */
 header {
-    background-color: #c28107;
+    background-color: #FFA500;
     color: #ffffff;
     text-align: center;
     padding: 2em 0;
@@ -45,6 +45,7 @@ h2 {
     padding: 1em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    margin-bottom: 2em;
 }
 
 ul {
@@ -58,7 +59,7 @@ li {
 
 li::before {
     content: '•';
-    color: #df950a;
+    color: #FFA500;
     font-weight: bold;
     display: inline-block;
     width: 1em;
@@ -67,21 +68,24 @@ li::before {
 
 /* Wireframes */
 .wireframes {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
 }
 
 .wireframe {
-    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .wireframe img {
-    max-width: 100%;
-    height: auto;
+    max-width: 450px;
+    height: 350px;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-top: 0.5em;
 }
 
 /* Footer Styling */
@@ -90,7 +94,20 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1em 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    margin-top: 2em;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 1em 0;
+    }
+
+    .content-block {
+        padding: 1em;
+    }
+
+    .wireframes {
+        grid-template-columns: 1fr;
+    }
 }
