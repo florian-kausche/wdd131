@@ -1,0 +1,220 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Header Styles */
+header {
+    background-color:  #633974;
+    color: white;
+    padding: 1em 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #333;
+    transform: scale(1.1);
+}
+
+nav ul li a::before,
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all 0.3s;
+}
+
+nav ul li a::before {
+    left: 0;
+    bottom: 0;
+}
+
+nav ul li a::after {
+    right: 0;
+    bottom: 0;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after,
+nav ul li a.active::before,
+nav ul li a.active::after {
+    width: 50%;
+}
+
+/* Main Styles */
+main {
+    padding: 2em 0;
+}
+
+.mission,
+.history,
+.team {
+    margin-bottom: 2em;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission h1,
+.history h2,
+.team h2 {
+    color: #FF9800;
+    margin-bottom: 0.5em;
+}
+
+.history-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.history-images img {
+    width: 32%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.history-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.team-member {
+    text-align: center;
+    width: 32%;
+}
+
+.team-member img {
+    width: 80%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-member h3 {
+    margin-top: 0.5em;
+    color: #FF9800;
+}
+
+.team-member p {
+    color: #666;
+}
+
+/* Footer Styles */
+footer {
+    background-color:  #633974;
+    color: white;
+    padding: 1em 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .footer-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .contact p {
+    margin: 0.5em 0;
+}
+
+footer .social {
+    display: flex;
+}
+
+footer .social .social-icon {
+    font-size: 1.5em;
+    margin-right: 0.5em;
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+}
+
+footer .social .social-icon:hover {
+    color: #333;
+    transform: scale(1.1);
+}
