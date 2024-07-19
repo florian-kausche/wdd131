@@ -65,7 +65,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(243, 244, 246);
     text-decoration: none;
     font-weight: 500;
     position: relative;
@@ -123,7 +123,7 @@ main {
 .mission h1,
 .history h2,
 .team h2 {
-    color: #FF9800;
+    color: #572e9c;
     margin-bottom: 0.5em;
 }
 
@@ -158,7 +158,7 @@ main {
 
 .team-member img {
     width: 80%;
-    border-radius: 50%;
+    border-radius: 20%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -170,7 +170,7 @@ main {
 
 .team-member h3 {
     margin-top: 0.5em;
-    color: #FF9800;
+    color: #572e9c;
 }
 
 .team-member p {

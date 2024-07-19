@@ -67,14 +67,13 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #4A235A;
+    color: #984f13;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    
     border-radius: 10px;
 }
 
@@ -94,6 +93,7 @@ h2 {
     font-size: 28px;
     margin-bottom: 20px;
     color: #333;
+    text-align: center;
 }
 
 .cards {
@@ -137,11 +137,13 @@ h2 {
 
 .event-lists {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    text-align: center;
 }
 
 .event-column {
     width: 48%;
+
 }
 
 .event-column h3 {
@@ -230,7 +232,7 @@ footer .social a:hover {
         flex-direction: column;
         align-items: center;
     }
- 
+
     header nav ul li {
         margin: 10px 0;
     }
