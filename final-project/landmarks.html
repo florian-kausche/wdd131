@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Famous Landmarks in Accra</title>
-    <link rel="stylesheet" href="landmarks.css">
+    <link rel="stylesheet" href="styles/landmarks.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -18,7 +18,8 @@
         <div class="container">
             <div class="logo">ExploringAccra</div>
             <nav>
-                <ul>
+                <button id="menu" aria-label="Toggle menu"></button>
+                <ul id="nav-menu" class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="landmarks.html" class="active">Landmarks</a></li>
@@ -38,49 +39,49 @@
                         <img src="images/independence-arch.jpg" alt="Independence Arch">
                         <h3>Independence Arch</h3>
                         <p>A symbol of Ghana's independence, the arch is located in Black Star Square.</p>
-                        <button>Read More</button>
+                        <a href="https://en.wikipedia.org/wiki/Independence_Arch" target="_blank"><button>Read More</button></a>
                     </div>
                     <div class="card">
                         <img src="images/kwame-nkrumah-mausoleum.jpg" alt="Kwame Nkrumah Mausoleum">
                         <h3>Nkrumah Mausoleum</h3>
                         <p>The final resting place of Ghana's first President, surrounded by scenic gardens.</p>
-                        <button>Read More</button>
+                        <a href="https://knmp.gov.gh/" target="_blank"><button>Read More</button></a>
                     </div>
                     <div class="card">
                         <img src="images/osu-castle.jpg" alt="Osu Castle">
                         <h3>Osu Castle</h3>
                         <p>A historic fort located on the coast, offering a glimpse into Ghana's colonial past.</p>
-                        <button>Read More</button>
+                        <a href="https://www.ghanamuseums.org/forts/fort-christianburg.php" target="_blank"><button>Read More</button></a>
                     </div>
                     <div class="card">
                         <img src="images/national-theatre.jpg" alt="National Theatre">
                         <h3>National Theatre</h3>
                         <p>A striking modern building that hosts various cultural events and performances.</p>
-                        <button>Read More</button>
+                        <a href="https://www.nationaltheatre.gov.gh/" target="_blank"><button>Read More</button></a>
                     </div>
                     <div class="card">
                         <img src="images/jamestown-lighthouse.jpg" alt="Jamestown Lighthouse">
                         <h3>Jamestown Lighthouse</h3>
                         <p>A historic lighthouse providing panoramic views of the city and the Gulf of Guinea.</p>
-                        <button>Read More</button>
+                        <a href="https://artsandculture.google.com/story/the-jamestown-lighthouse-hacsa-foundation/tgVxDXAVQMCByQ?hl=en" target="_blank"><button>Read More</button></a>
                     </div>
                     <div class="card">
                         <img src="images/aburi-botanical-gardens.jpg" alt="Aburi Botanical Gardens">
                         <h3>Aburi Botanical Gardens</h3>
                         <p>A lush green space perfect for picnics and nature walks, located in the Eastern Region of Ghana.</p>
-                        <button>Read More</button>
+                        <a href="https://en.wikipedia.org/wiki/Aburi_Botanical_Gardens" target="_blank"><button>Read More</button></a>
                     </div>
                     <div class="card">
                         <img src="images/art-center.jpg" alt="Art Center">
                         <h3>Centre for National Culture</h3>
                         <p>A bustling marketplace for arts, crafts, and souvenirs, reflecting Ghanaian culture and heritage.</p>
-                        <button>Read More</button>
+                        <a href="https://ghanaculture.gov.gh/"><button>Read More</button></a>
                     </div>
                     <div class="card">
                         <img src="images/legon-botanical-gardens.webp" alt="Legon Botanical Gardens">
                         <h3>Legon Botanical Gardens</h3>
                         <p>A serene park with lush gardens, a canopy walkway, and various recreational activities.</p>
-                        <button>Read More</button>
+                        <a href="https://legonbotanicalgardens.com/" target="_blank"><button>Read More</button></a>
                     </div>
                 </div>
             </div>
@@ -91,8 +92,7 @@
         <div class="container">
             <div class="footer-links">
                 <div class="contact">
-                    <p>Email: info@exploringaccra.com</p>
-                    <p>Phone: +233 24 123 4567</p>
+                    <p>&copy; 2024 Exploring Accra. All rights reserved. |Florian Adu Kausche</p>
                 </div>
                 <div class="social">
                     <a href="https://web.facebook.com/places/Things-to-do-in-Accra-Ghana/110453975643636/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
@@ -102,5 +102,6 @@
             </div>
         </div>
     </footer>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>

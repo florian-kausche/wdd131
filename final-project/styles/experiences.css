@@ -50,6 +50,10 @@ header h1 {
     font-weight: bold;
 }
 
+header nav {
+    position: relative;
+}
+
 header nav ul {
     list-style: none;
     display: flex;
@@ -68,6 +72,33 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: #984f13;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    display: none; /* Hide by default */
+    margin-left: auto; /* Aligns the hamburger to the right */
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+.nav-links {
+    display: flex;
+    margin-right: 1rem;
+}
+
+.nav-links.open {
+    display: block;
 }
 
 .container {
@@ -143,7 +174,6 @@ h2 {
 
 .event-column {
     width: 48%;
-
 }
 
 .event-column h3 {
@@ -228,13 +258,38 @@ footer .social a:hover {
         flex-direction: column;
     }
 
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    header nav {
+        width: 100%;
+    }
+
     header nav ul {
         flex-direction: column;
         align-items: center;
+        display: none; /* Hidden by default */
+        width: 100%; /* Full width */
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+    }
+
+    header nav ul.open {
+        display: flex; /* Display when open */
     }
 
     header nav ul li {
         margin: 10px 0;
+    }
+
+    #menu {
+        display: block; /* Show hamburger menu */
+        position: absolute;
+        right: 20px; /* Right side of the header */
+        top: 20px; /* Aligns it vertically with the header */
     }
 
     .cards {

@@ -31,6 +31,7 @@ header {
     position: relative;
     z-index: 1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
 }
 
 header nav {
@@ -39,8 +40,8 @@ header nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
-    background-color: #661686;
+    padding: 20px;
+    background-color: rgba(102, 22, 134, 0.8); /* Semi-transparent for video visibility */
 }
 
 header .logo a {
@@ -53,6 +54,8 @@ header .logo a {
 header .nav-links {
     list-style: none;
     display: flex;
+    margin-right: 1rem;
+    
 }
 
 header .nav-links li {
@@ -67,7 +70,25 @@ header .nav-links a {
 }
 
 header .nav-links a:hover {
-    color: #FFA500;
+    color: #756b5a;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    display: none; /* Hide by default */
+    margin-left: auto; /* Aligns the hamburger to the right */
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❎";
 }
 
 .hero {
@@ -95,7 +116,6 @@ header .nav-links a:hover {
     display: flex;
     justify-content: space-around;
     padding: 50px 20px;
-    background-color: #661686;
     position: relative;
     z-index: 1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -109,7 +129,6 @@ header .nav-links a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     color: #333;
-    opacity: 20px;
 }
 
 .info-box.landmarks {
@@ -141,15 +160,15 @@ header .nav-links a:hover {
 }
 
 .btn:hover {
-    background-color:#4A235A;
+    background-color: #4A235A;
     transform: scale(1.05);
 }
 
 /* Footer Styles */
 footer {
-   
+    background-color: rgba(99, 55, 116, 0.8); /* Semi-transparent for video visibility */
     color: white;
-    padding: 20px 0;
+    padding: 1em 0;
 }
 
 footer .container {
@@ -160,7 +179,6 @@ footer .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    background-color: #661686;
 }
 
 footer .footer-links {
@@ -171,19 +189,15 @@ footer .footer-links {
     flex-wrap: wrap;
 }
 
-footer .contact {
-    flex: 1;
-    text-align: left;
-}
-
 footer .contact p {
     margin: 0.5em 0;
 }
 
 footer .social {
-    flex: 1;
-    text-align: right;
-    padding: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
 }
 
 footer .social .social-icon {
@@ -194,26 +208,48 @@ footer .social .social-icon {
 }
 
 footer .social .social-icon:hover {
-    color: #333;
+    color: #4f4b45;
     transform: scale(1.1);
 }
 
+/* Mobile view styles */
 @media (max-width: 768px) {
     header nav {
         flex-direction: column;
+        align-items: center;
     }
 
     header .nav-links {
         flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 0;
+        background-color: rgba(102, 22, 134, 0.9); /* Semi-transparent for better visibility */
+        width: 30%; /*width for mobile */
+        display: none;
+        align-items: center;
+        z-index: 2;
     }
- 
+
+    header .nav-links.open {
+        display: flex; /* Show when open class is added */
+    }
+
     header .nav-links li {
         margin: 10px 0;
+    }
+
+    #menu {
+        display: block; /* Show hamburger menu */
     }
 
     .info-section {
         flex-direction: column;
         align-items: center;
+    }
+
+    .info-box {
+        margin-bottom: 20px; /* Add space between sections */
     }
 
     footer .container {
@@ -222,7 +258,22 @@ footer .social .social-icon:hover {
     }
 
     footer .social {
-        text-align: center;
+        justify-content: center;
         margin-top: 10px;
+        padding: 0;
     }
+
+    footer .social .social-icon {
+        margin: 10px 5px;
+    }
+}
+
+main {
+    padding: 1rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
 }

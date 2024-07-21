@@ -218,3 +218,31 @@ footer .social .social-icon:hover {
     color: #333;
     transform: scale(1.1);
 }
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header .nav-links {
+        flex-direction: column;
+    }
+ 
+    header .nav-links li {
+        margin: 10px 0;
+    }
+
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .social {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
