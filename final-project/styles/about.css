@@ -37,9 +37,10 @@ body {
 
 /* Header Styles */
 header {
-    background-color:  #633974;
+    background-color: #633974;
     color: white;
     padding: 1em 0;
+    position: relative; /* Ensure header is positioned relative for proper overlay of the mobile menu */
 }
 
 header .container {
@@ -53,56 +54,82 @@ header .logo {
     font-weight: 700;
 }
 
-nav ul {
+header nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
+    margin: 0;
 }
 
-nav ul li {
+header nav ul li {
     margin-left: 1.5em;
 }
 
-nav ul li a {
-    color: rgb(243, 244, 246);
+header nav ul li a {
+    color: #f3f4f6;
     text-decoration: none;
     font-weight: 500;
     position: relative;
     transition: color 0.3s, transform 0.3s;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-    color: #333;
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #0d0808;
     transform: scale(1.1);
 }
 
-nav ul li a::before,
-nav ul li a::after {
+header nav ul li a::before,
+header nav ul li a::after {
     content: '';
     position: absolute;
     width: 0;
     height: 2px;
-    background: white;
+    background: rgb(189, 124, 229);
     transition: all 0.3s;
 }
 
-nav ul li a::before {
+header nav ul li a::before {
     left: 0;
     bottom: 0;
 }
 
-nav ul li a::after {
+header nav ul li a::after {
     right: 0;
     bottom: 0;
 }
 
-nav ul li a:hover::before,
-nav ul li a:hover::after,
-nav ul li a.active::before,
-nav ul li a.active::after {
+header nav ul li a:hover::before,
+header nav ul li a:hover::after,
+header nav ul li a.active::before,
+header nav ul li a.active::after {
     width: 50%;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #f3f4f6;
+    cursor: pointer;
+    display: none; /* Hide by default */
+    margin-left: auto; /* Aligns the hamburger to the right */
+    z-index: 1001; /* Ensure it's above the nav menu */
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links.open {
+    display: flex; /* Show the menu when the 'open' class is added */
 }
 
 /* Main Styles */
@@ -153,7 +180,7 @@ main {
 
 .team-member {
     text-align: center;
-    width: 32%;
+    width: 23%;
 }
 
 .team-member img {
@@ -179,70 +206,65 @@ main {
 
 /* Footer Styles */
 footer {
-    background-color:  #633974;
+    background-color: #633974;
     color: white;
+    text-align: center;
     padding: 1em 0;
 }
 
-footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-footer .footer-links {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-footer .contact p {
-    margin: 0.5em 0;
-}
-
 footer .social {
-    display: flex;
+    margin-top: 1em;
 }
 
-footer .social .social-icon {
-    font-size: 1.5em;
-    margin-right: 0.5em;
+footer .social-icon {
+    margin: 0 0.5em;
     color: white;
-    transition: color 0.3s, transform 0.3s;
+    font-size: 1.5em;
+    transition: color 0.3s;
 }
 
-footer .social .social-icon:hover {
-    color: #333;
-    transform: scale(1.1);
+footer .social-icon:hover {
+    color: #f9f9f9;
 }
+
+/* Mobile View Styles */
 @media (max-width: 768px) {
-    header nav {
+    .nav-links {
+        display: none; /* Hide by default in mobile view */
         flex-direction: column;
-    }
-
-    header .nav-links {
-        flex-direction: column;
-    }
- 
-    header .nav-links li {
-        margin: 10px 0;
-    }
-
-    .info-section {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    footer .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    footer .social {
+        background-color: #633974;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 0;
+        width: 30%;
         text-align: center;
-        margin-top: 10px;
+        z-index: 1000; /* Ensure it appears above other content */
+    }
+
+    .nav-links.open {
+        display: flex; /* Show when open class is added */
+    }
+
+    .nav-links li {
+        margin: 1em 0;
+    }
+
+    #menu {
+        display: block; /* Show hamburger menu in mobile view */
+    }
+
+    .history-images,
+    .team-members {
+        flex-direction: column;
+    }
+
+    .history-images img,
+    .team-member {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .team-member img {
+        width: 100%;
     }
 }

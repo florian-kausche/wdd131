@@ -253,6 +253,7 @@ footer .social a:hover {
     transform: scale(1.1);
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
@@ -270,11 +271,11 @@ footer .social a:hover {
         flex-direction: column;
         align-items: center;
         display: none; /* Hidden by default */
-        width: 100%; /* Full width */
+        width: 30%; /* Full width */
         background: rgba(0, 0, 0, 0.8);
         position: absolute;
         top: 60px; /* Adjust based on header height */
-        left: 0;
+        right: 0; /* Aligns menu to the right */
     }
 
     header nav ul.open {

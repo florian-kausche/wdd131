@@ -31,7 +31,6 @@ header {
     position: relative;
     z-index: 1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   
 }
 
 header nav {
@@ -42,6 +41,7 @@ header nav {
     margin: 0 auto;
     padding: 20px;
     background-color: rgba(102, 22, 134, 0.8); /* Semi-transparent for video visibility */
+    position: relative;
 }
 
 header .logo a {
@@ -55,7 +55,6 @@ header .nav-links {
     list-style: none;
     display: flex;
     margin-right: 1rem;
-    
 }
 
 header .nav-links li {
@@ -81,6 +80,8 @@ header .nav-links a:hover {
     cursor: pointer;
     display: none; /* Hide by default */
     margin-left: auto; /* Aligns the hamburger to the right */
+    position: relative; /* Ensure it's positioned above other elements */
+    z-index: 2; /* Make sure it's above the menu */
 }
 
 #menu::before {
@@ -225,10 +226,10 @@ footer .social .social-icon:hover {
         top: 60px; /* Adjust based on header height */
         right: 0;
         background-color: rgba(102, 22, 134, 0.9); /* Semi-transparent for better visibility */
-        width: 30%; /*width for mobile */
+        width: 30%; /* width for mobile */
         display: none;
         align-items: center;
-        z-index: 2;
+        z-index: 2; /* Ensure it's behind the menu button */
     }
 
     header .nav-links.open {

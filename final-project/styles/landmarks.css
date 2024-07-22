@@ -86,6 +86,9 @@ header nav ul li a.active {
     color: #fff;
     cursor: pointer;
     display: none; /* Hide by default */
+    position: absolute;
+    right: 20px;
+    top: 10px;
 }
 
 #menu::before {
@@ -173,7 +176,7 @@ h1, h2 {
 footer {
     background-color: #633974;
     color: white;
-    padding: 20px 0;
+    padding: 40px 0; /* Added padding for desktop view */
     position: relative;
     bottom: 0;
     width: 100%;
@@ -184,6 +187,9 @@ footer .container {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
 }
 
 footer .footer-links {
@@ -252,5 +258,19 @@ footer .social .social-icon:hover {
 
     .cards {
         grid-template-columns: 1fr;
+    }
+
+    footer {
+        padding: 20px 0; /* Reduced padding for mobile view */
+    }
+
+    footer .contact p {
+        text-align: center;
+        width: 100%;
+    }
+
+    footer .social {
+        justify-content: center;
+        width: 80%;
     }
 }
