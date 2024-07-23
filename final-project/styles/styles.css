@@ -223,7 +223,7 @@ footer .social .social-icon:hover {
     header .nav-links {
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Adjust based on header height */
+        top: 80px; /* Adjust based on header height */
         right: 0;
         background-color: rgba(102, 22, 134, 0.9); /* Semi-transparent for better visibility */
         width: 30%; /* width for mobile */
@@ -269,6 +269,13 @@ footer .social .social-icon:hover {
     }
 }
 
+/* Ensure nav-links are displayed correctly on desktop */
+@media (min-width: 769px) {
+    header .nav-links {
+        display: flex !important; /* Override display:none set by JavaScript */
+    }
+}
+
 main {
     padding: 1rem;
     text-align: center;
@@ -278,3 +285,4 @@ h2 {
     font-size: 1.5rem;
     margin: 1rem 0;
 }
+ 
