@@ -320,4 +320,13 @@ footer .social img:hover {
     .event-column {
         width: 100%;
     }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer .social {
+        justify-content: center;
+        margin-top: 10px;
+    }
 }

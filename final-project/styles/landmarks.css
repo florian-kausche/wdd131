@@ -49,13 +49,21 @@ header .container {
     padding: 0 20px;
 }
 
+.hero a {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #f9f9f9;
+}
+
 header .logo {
     font-size: 1.5em;
     font-weight: bold;
+    color: #fff;
 }
 
 header nav {
     position: relative;
+    margin-left: auto; /* Add this line */
 }
 
 header nav ul {
@@ -124,6 +132,7 @@ header nav ul li a.active {
 
 .nav-links ul li {
     margin: 10px 0;
+    text-align: right;
 }
 
 .nav-links ul li a {
@@ -131,6 +140,7 @@ header nav ul li a.active {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
+   
 }
 
 .nav-links ul li a:hover {
@@ -238,13 +248,12 @@ footer .social {
     display: flex;
 }
 
-footer .social img{
+footer .social img {
     font-size: 1.5em;
     margin-right: 1em;
     transition: color 0.3s, transform 0.3s;
     width: 30px;
     height: auto;
-
 }
 
 footer .social img:hover {
