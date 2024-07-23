@@ -88,7 +88,7 @@ nav {
     z-index: 4;
 }
 
-nav ul {
+nav ul.nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
@@ -106,9 +106,24 @@ nav ul li a.active {
     border-radius: 4px;
 }
 
+footer .social img {
+    font-size: 1.5em;
+    margin-left: 0.5em;
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+    width: 30px;
+    height: auto;
+}
+
+footer .social img:hover {
+    background-color: #f1f0ee;
+    transform: scale(1.2);
+    border-radius: 5px;
+}
+
 /* Mobile view styles */
 @media (max-width: 768px) {
-    nav {
+    nav ul.nav-links {
         display: none;
         flex-direction: column;
         align-items: center;
@@ -116,12 +131,12 @@ nav ul li a.active {
         top: 60px; /* Adjust based on header height */
         right: 0;
         background-color: rgba(102, 22, 134, 0.9); /* Semi-transparent for better visibility */
-        width: 30%; /* width for mobile */
+        width: 100%;
         z-index: 4; /* Ensure it appears above other content */
     }
 
-    nav ul {
-        flex-direction: column;
+    nav ul.nav-links.open {
+        display: flex;
     }
 
     nav ul li {
@@ -130,10 +145,6 @@ nav ul li a.active {
 
     #menu {
         display: block; /* Show the hamburger menu button */
-    }
-
-    nav.open {
-        display: flex; /* Show when open class is added */
     }
 }
 
@@ -206,4 +217,262 @@ footer {
 
 .social a:hover {
     color: #4e4a4a;
+}
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #4A235A;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Loader */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4A235A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Video Background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #4A235A;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: relative;
+    z-index: 3;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4A235A;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #4A235A;
+    cursor: pointer;
+    display: none; /* Hide by default */
+    margin-left: auto; /* Aligns the hamburger to the right */
+}
+
+#menu::before {
+    content: "☰"; /* Hamburger menu icon */
+}
+
+#menu.open::before {
+    content: "✖"; /* Close icon */
+}
+
+nav {
+    display: flex;
+    z-index: 4;
+}
+
+nav ul.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #410c50;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #d6c0df;
+    border-radius: 4px;
+}
+
+footer .social img {
+    font-size: 1.5em;
+    margin-left: 0.5em;
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+    width: 30px;
+    height: auto;
+}
+
+footer .social img:hover {
+    background-color: #f1f0ee;
+    transform: scale(1.2);
+    border-radius: 5px;
+}
+
+/* Mobile view styles */
+@media (max-width: 768px) {
+    nav ul.nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 0;
+        background-color: rgba(102, 22, 134, 0.9); /* Semi-transparent for better visibility */
+        width: 100%;
+        z-index: 4; /* Ensure it appears above other content */
+    }
+
+    nav ul.nav-links.open {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #menu {
+        display: block; /* Show the hamburger menu button */
+    }
+}
+
+/* Thank You Message Section */
+.thank-you-message {
+    text-align: center;
+    padding: 40px 0;
+    flex: 1;  /* Ensures it takes available space */
+}
+
+.thank-you-message h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.thank-you-message p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.thank-you-message .btn {
+    padding: 10px 20px;
+    background-color: #4A235A;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.thank-you-message .btn:hover {
+    background-color: #633974;
+}
+
+/* Image Section */
+.image-section {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: auto;  /* Ensures it sticks to the bottom if the content is not enough */
+    padding: 10px;
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+p, .footer-links .social a {
+margin: 10px;
+}
+
+.social a {
+color: rgb(184, 174, 174);
+text-decoration: none;
+font-size: 1.5em;
+margin: 0 10px;
+}
+
+.social a
+{
+color: #4e4a4a;
 }

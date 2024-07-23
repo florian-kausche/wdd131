@@ -201,16 +201,19 @@ footer .social {
     padding-right: 20px;
 }
 
-footer .social .social-icon {
+footer .social img {
     font-size: 1.5em;
-    margin-left: 0.5em;
+    margin-left: 1em;
     color: white;
     transition: color 0.3s, transform 0.3s;
+    width: 30px;
+    height: auto;
 }
 
-footer .social .social-icon:hover {
-    color: #4f4b45;
-    transform: scale(1.1);
+footer .social img:hover {
+    background-color: #f1f0ee;
+    transform: scale(1.2);
+    border-radius: 5px;
 }
 
 /* Mobile view styles */
@@ -285,4 +288,6 @@ h2 {
     font-size: 1.5rem;
     margin: 1rem 0;
 }
+
+
  

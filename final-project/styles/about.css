@@ -206,23 +206,24 @@ main {
 
 /* Footer Styles */
 footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    color: white;
     background-color: #58227a;
+    color: white;
+    padding: 0 20px;
 }
 
-.footer-links {
+.footer-container {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.footer-links .contact p, .footer-links .social a {
-    margin: 10px;
+.contact {
+    text-align: left;
 }
+
+.social {
+    text-align: right;
+}
+
 .social a {
     color: rgb(243, 242, 242);
     text-decoration: none;
@@ -230,9 +231,20 @@ footer {
     margin: 0 10px;
 }
 
-.social a:hover {
-    color: #4e4a4a;
+.social img {
+    font-size: 1.5em;
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+    width: 30px;
+    height: auto;
 }
+
+.social img:hover {
+    background-color: #f1f0ee;
+    transform: scale(1.2);
+    border-radius: 5px;
+}
+
 /* Mobile View Styles */
 @media (max-width: 768px) {
     .nav-links {
@@ -272,5 +284,14 @@ footer {
 
     .team-member img {
         width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social {
+        margin-top: 10px;
     }
 }

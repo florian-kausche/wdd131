@@ -101,6 +101,20 @@ nav ul li a.active {
     border-radius: 4px;
 }
 
+footer .social img {
+    font-size: 1.5em;
+    margin-left: 0.5em;
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+    width: 30px;
+    height: auto;
+}
+
+footer .social img:hover {
+    transform: scale(1.2);
+    border-radius: 5px;
+}
+
 /* Mobile view styles */
 @media (max-width: 768px) {
     header nav {

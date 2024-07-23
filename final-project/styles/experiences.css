@@ -219,7 +219,7 @@ blockquote footer {
 }
 
 footer {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(81, 65, 65, 0.5);
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -251,6 +251,21 @@ footer .social a {
 footer .social a:hover {
     color: #4A235A;
     transform: scale(1.1);
+}
+
+footer .social img {
+    font-size: 1.5em;
+    margin-left: 0.5em;
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+    width: 30px;
+    height: auto;
+}
+
+footer .social img:hover {
+    background-color: #f1f0ee;
+    transform: scale(1.2);
+    border-radius: 5px;
 }
 
 /* Media Queries */

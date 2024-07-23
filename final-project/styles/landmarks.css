@@ -35,7 +35,7 @@ header {
     padding: 10px 0;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     z-index: 1000;
 }
@@ -238,16 +238,19 @@ footer .social {
     display: flex;
 }
 
-footer .social .social-icon {
+footer .social img{
     font-size: 1.5em;
-    margin-right: 0.5em;
-    color: white;
+    margin-right: 1em;
     transition: color 0.3s, transform 0.3s;
+    width: 30px;
+    height: auto;
+
 }
 
-footer .social .social-icon:hover {
-    color: #333;
-    transform: scale(1.1);
+footer .social img:hover {
+    background-color: #f9f9f9;
+    transform: scale(1.2);
+    border-radius: 5px;
 }
 
 /* Responsive Styles */
