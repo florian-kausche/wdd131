@@ -270,9 +270,11 @@ footer .social img:hover {
 
 /* Media Queries */
 @media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
+    header nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
     }
+    
 
     header h1 {
         margin-bottom: 10px;
@@ -282,23 +284,24 @@ footer .social img:hover {
         width: 100%;
     }
 
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-        display: none; /* Hidden by default */
-        width: 30%; /* Full width */
-        background: rgba(0, 0, 0, 0.8);
-        position: absolute;
-        top: 60px; /* Adjust based on header height */
-        right: 0; /* Aligns menu to the right */
+    header .nav-links {
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Absolute positioning */
+        top: 80px; /* Position below header */
+        right: 0; /* Align to the right */
+        background-color: rgba(56, 53, 58, 0.9); /* Semi-transparent background */
+        width: 60%; /* Width for mobile */
+        display: none; /* Hide by default */
+        align-items: center; /* Center items */
+        z-index: 2; /* Ensure it's behind the menu button */
     }
 
-    header nav ul.open {
-        display: flex; /* Display when open */
+    header .nav-links.open {
+        display: flex; /* Show when open class is added */
     }
 
-    header nav ul li {
-        margin: 10px 0;
+    header .nav-links li {
+        margin: 10px 0; /* Vertical margin */
     }
 
     #menu {
