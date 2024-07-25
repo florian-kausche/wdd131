@@ -74,7 +74,7 @@ header nav ul li a {
 
 header nav ul li a:hover,
 header nav ul li a.active {
-    color: #0d0808; /* Change color on hover/active */
+    color: #fefefe; /* Change color on hover/active */
     transform: scale(1.1); /* Scale up on hover/active */
 }
 

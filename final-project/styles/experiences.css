@@ -97,9 +97,7 @@ header nav ul li a:hover {
     margin-right: 1rem;
 }
 
-.nav-links.open {
-    display: block;
-}
+
 
 .container {
     max-width: 1200px;
@@ -296,14 +294,18 @@ footer .social img:hover {
         z-index: 2; /* Ensure it's behind the menu button */
     }
 
-    header .nav-links.open {
-        display: flex; /* Show when open class is added */
+    .nav-links.open {
+        display: flex;
+        position: absolute;
+        top: 55px; /* Adjust based on header height */
+        right: -5; /* Align the menu to the right */
+        background: rgba(0, 0, 0, 0.8);
+        width: 130px; /* Adjust the width of the menu */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
     }
-
-    header .nav-links li {
-        margin: 10px 0; /* Vertical margin */
-    }
-
     #menu {
         display: block; /* Show hamburger menu */
         position: absolute;

@@ -63,7 +63,6 @@ header .logo {
 
 header nav {
     position: relative;
-    margin-left: auto; /* Add this line */
 }
 
 header nav ul {
@@ -112,17 +111,7 @@ header nav ul li a.active {
     display: flex;
 }
 
-.nav-links.open {
-    display: block;
-    position: absolute;
-    top: 60px; /* Adjust based on header height */
-    right: 0; /* Align the menu to the right */
-    background: rgba(0, 0, 0, 0.8);
-    width: 250px; /* Adjust the width of the menu */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    padding: 10px;
-}
+
 
 .nav-links ul {
     display: flex;
@@ -140,7 +129,6 @@ header nav ul li a.active {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
-   
 }
 
 .nav-links ul li a:hover {
@@ -212,6 +200,61 @@ h1, h2 {
     background: #633974;
 }
 
+/* Add Landmark Form */
+.add-landmark {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.add-landmark h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #4A235A;
+}
+
+.add-landmark input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.add-landmark button {
+    padding: 10px 20px;
+    background: #4A235A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.add-landmark button:hover {
+    background: #633974;
+}
+
+/* Delete Button */
+.card .delete-btn {
+    background: #4A235A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px auto;
+    display: block;
+    width: 80%;
+    padding: 10px;
+}
+
+.card .delete-btn:hover {
+    background: #633974;
+}
+
 /* Footer Styles */
 footer {
     background-color: #633974;
@@ -276,26 +319,27 @@ footer .social img:hover {
     header .nav-links {
         flex-direction: column; /* Stack items vertically */
         position: absolute; /* Absolute positioning */
-        top: 80px; /* Position below header */
+        top: 10px; /* Position below header */
         right: 0; /* Align to the right */
         background-color: rgba(102, 22, 134, 0.9); /* Semi-transparent background */
         width: 30%; /* Width for mobile */
         display: none; /* Hide by default */
         align-items: center; /* Center items */
-       
     }
-
+    .nav-links.open {
+        display: block;
+        position: absolute;
+        top: 10px; /* Adjust based on header height */
+        right: 0; /* Align the menu to the right */
+        background: rgba(0, 0, 0, 0.8);
+        width: 220px; /* Adjust the width of the menu */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        padding: 5px;
+    }
     header .nav-links.open {
         display: flex; /* Display when open */
     }
-
-    header .nav-links li {
-        margin: 10px 0;
-    }
-    header nav ul li a:hover,
-header nav ul li a.active {
-    color: #FFD700;
-}
 
     #menu {
         display: block; /* Show hamburger menu */
@@ -320,7 +364,6 @@ header nav ul li a.active {
     }
 }
 
-
 main {
     padding: 1rem; /* Padding */
     text-align: center; /* Center text */
@@ -330,3 +373,4 @@ h2 {
     font-size: 1.5rem; /* Font size */
     margin: 1rem 0; /* Vertical margin */
 }
+
